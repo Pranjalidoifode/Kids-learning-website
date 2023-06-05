@@ -1,0 +1,210 @@
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nav{
+   margin-left: 825px;
+   margin-right: 70px;
+}
+
+button,img{
+   height:200px;
+   width: 200px;
+}
+.leftbutton{
+   margin-left: 150px;
+   margin-top: 50px;
+}
+.rightbutton{
+   margin-top:50px ;
+}
+body{
+   background-color: rgba(255, 0, 128, 0.409);
+}
+.social{
+   list-style-type:none;
+   
+}
+.tags{
+   float: left;
+   border: 20px;
+   margin-left: 50px;
+}
+.footer{
+  padding-top: 10px;
+   margin-top: 120px;
+   margin-bottom:10px;
+   background-color: aliceblue;
+}
+html, body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.show-menu {
+  cursor: pointer;
+}
+
+input.checkbox-menu[type="checkbox"] {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input.checkbox-menu[type="checkbox"]:checked ~ div.menu-block {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-icon {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0.5em;
+  vertical-align: middle;
+}
+
+.menu-block {
+  display: inline-block;
+  opacity: 0;
+  vertical-align: middle;
+  visibility: hidden;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+ul.navUL {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navUL li {
+  display: inline-block;
+  padding: 0px 5px;
+}
+ 
+
+
+ul.navUL li a {
+  color: #999999;
+  display: block;
+  padding: 3px;
+  text-decoration: none;
+}
+ul.navUL li a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+
+
+body {
+  background: #f8f5f512;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+footer {
+  position: relative;
+  background:rgba(58, 224, 236, 0.622);
+  width: 100%;
+  min-height: 150px;
+  padding: 20px 50px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  list-style: none;
+}
+footer .footer-icons {
+  height: 45px;
+  object-fit: contain;
+  margin: 0 20px;
+  transition: all ease-out 150ms;
+  z-index: 1;
+}
+footer .footer-icons:hover {
+  transform: translateY(-8px);
+  color: black;
+}
+footer .footer-link {
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #242121;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  transition: all ease-in 150ms;
+  
+}
+footer li:hover,
+.footer-link:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://th.bing.com/th/id/OIP.xWb-14U2ecUnlZgYKQ1eKQHaC7?w=282&h=138&c=7&r=0&o=5&dpr=1.6&pid=1.7");
+  background-size: 1000px 100px;
+}
+footer #wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animatedWave 4s linear infinite;
+}
+footer #wave2 {
+  z-index: 999;
+  opacity: 0.75;
+  bottom: 10px;
+  animation: animatedWave_02 4s linear infinite;
+}
+footer #wave3 {
+  z-index: 998;
+  opacity: 0.5;
+  bottom: 20px;
+  animation: animatedWave 3s linear infinite;
+}
+footer #wave4 {
+  z-index: 1000;
+  opacity: 0.25;
+  bottom: 30px;
+  animation: animatedWave_02 2s linear infinite;
+}
+@keyframes animatedWave {
+  0% {
+      background-position-x: 1000px;
+  }
+  100% {
+      background-position-x: 0;
+  }
+}
+
+@keyframes animatedWave_02 {
+  0% {
+      background-position-x: 0;
+  }
+  100% {
+      background-position-x: 1000px;
+  }
+}
+.rights
+{
+  margin-left: 360px;
+}

@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <title>Audio</title>
+   <style>
+  input[type="image"]:hover{
+  height:230px;
+  width:230px; 
+  border: 10px solid red;
+  }
+      input[type='image'] {
+        border-style:solid;
+        margin-left: 250px;
+        margin-top: 20px;
+        align-items: center;
+      }
+      p{
+            margin-top: 10px;
+            font-size: 80px;
+            text-align: center;
+            text-decoration: underline;
+        }  
+      a{
+       padding-top:9px;
+       text-align: center;
+        height: 70px;
+        width:100px;
+        border-radius: 10px;
+      }
+      :root{
+        --clr-neon:hsl(317 100% 54%);
+        --clr-bg:hsl(323 21% 16%);
+      }
+      *,
+      *::before,
+      *::after{
+        box-sizing: border-box;
+      }
+      body{
+        min-height: 100vh;
+        place-items: center;
+        background:var(--clr-bg);
+        font-family:"Balsamiq sans",cursive;
+        color:var(--clr-neon);
+      }
+      .neon-button{
+        
+        min-height: 2vh;
+        width: 42vh;
+        font-size: 2rem;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color:var(--clr-neon);
+        border:var(--clr-neon) 0.125em solid ;
+        padding-left: 12px;
+        border-radius: 0.25em;
+        margin-left:460px;
+        text-shadow: 0 0 0.125em hsl(0 0% 100%/0.3),0 0 0.45em currentColor;
+        box-shadow:inset 0 0 0.5em 0 var(--clr-neon),0 0 0.5em 0 var(--clr-neon);
+        position: relative;
+        padding-top: 20px;
+        
+      }
+      .neon-button::before{
+        pointer-events: none;
+        content:'';
+        position: absolute;
+        background:var(--clr-neon);
+        top:120%;
+        left:0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(1em) rotateX(40deg) scale(1,0.35);
+        filter: blur(1.5em);
+        opacity: 0.7;
+}
+.neon-button::after{
+    content:'';
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    color: var(--clr-bg);
+    text-shadow: none;
+    opacity: 0;
+    transition: opacity 100ms linear;
+    background-color: var(--clr-neon);
+    z-index: -1;
+}
+.neon-button:hover,
+.neon-button:focus{
+    background:var(--clr-neon);
+    color: var(--clr-bg);
+    text-shadow: none;
+    text-decoration: none;
+}
+.neon-button:hover::before,
+.neon-button:focus::before{
+ opacity: 1;
+
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after{
+    opacity: 1;
+
+    
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+
+ 
+  p{
+    
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 10px;
+    color:#0e3742 ;
+    text-transform:uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,#0008);
+    line-height: 0.50em;
+    outline: none;
+    animation: animate 5s linear infinite;
+
+  }
+
+  @keyframes animate
+  {
+     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+     {
+      color: #0e3742;
+      box-shadow: none;
+     }
+     18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+     {
+      color: #fff;
+      text-shadow: 0 0 10px #03bcf4,
+      0 0 20px #03bcf4,
+      0 0 40px #03bcf4,
+      0 0 60px #03bcf4,
+      0 0 80px #03bcf4,
+      0 0 160px #03bcf4;
+    }
+  }
+    </style>
+    </head>
+    <body>
+    <script>
+      function playa() {
+        var audio = document.getElementById("audio1");
+        audio.play();
+      }
+      function playa2() {
+        var audio = document.getElementById("audio2");
+        audio.play();
+      }
+      function playb() {
+        var audio = document.getElementById("audio3");
+        audio.play();
+      }
+      function playb2() {
+        var audio = document.getElementById("audio4");
+        audio.play();
+      }
+      function playc() {
+        var audio = document.getElementById("audio5");
+        audio.play();
+      }
+      function playc2() {
+        var audio = document.getElementById("audio6");
+        audio.play();
+      }
+      function playd() {
+        var audio = document.getElementById("audio7");
+        audio.play();
+      }
+      function playd2() {
+        var audio = document.getElementById("audio8");
+        audio.play();
+      }
+      function playe() {
+        var audio = document.getElementById("audio9");
+        audio.play();
+      }
+      function playe2() {
+        var audio = document.getElementById("audio10");
+        audio.play();
+      }
+      function playf() {
+        var audio = document.getElementById("audio11");
+        audio.play();
+      }
+      function playf2() {
+        var audio = document.getElementById("audio12");
+        audio.play();
+      }
+      function playg() {
+        var audio = document.getElementById("audio13");
+        audio.play();
+      }
+      function playg2() {
+        var audio = document.getElementById("audio14");
+        audio.play();
+      }
+      function playh() {
+        var audio = document.getElementById("audio15");
+        audio.play();
+      }
+      function playh2() {
+        var audio = document.getElementById("audio16");
+        audio.play();
+      }
+      function playi() {
+        var audio = document.getElementById("audio17");
+        audio.play();
+      }
+      function playi2() {
+        var audio = document.getElementById("audio18");
+        audio.play();
+      }
+      function playj() {
+        var audio = document.getElementById("audio19");
+        audio.play();
+      }
+      function playj2() {
+        var audio = document.getElementById("audio20");
+        audio.play();
+      }
+      function playk() {
+        var audio = document.getElementById("audio21");
+        audio.play();
+      }
+      function playk2() {
+        var audio = document.getElementById("audio22");
+        audio.play();
+      }
+      function playl() {
+        var audio = document.getElementById("audio23");
+        audio.play();
+      }
+      function playl2() {
+        var audio = document.getElementById("audio24");
+        audio.play();
+      }
+      function playm() {
+        var audio = document.getElementById("audio25");
+        audio.play();
+      }
+      function playm2() {
+        var audio = document.getElementById("audio26");
+        audio.play();
+      }
+      function playn() {
+        var audio = document.getElementById("audio27");
+        audio.play();
+      }
+      function playn2() {
+        var audio = document.getElementById("audio28");
+        audio.play();
+      }
+      function playo() {
+        var audio = document.getElementById("audio29");
+        audio.play();
+      }
+      function playo2() {
+        var audio = document.getElementById("audio30");
+        audio.play();
+      }
+      function playp() {
+        var audio = document.getElementById("audio31");
+        audio.play();
+      }
+      function playp2() {
+        var audio = document.getElementById("audio32");
+        audio.play();
+      }
+      function playq() {
+        var audio = document.getElementById("audio33");
+        audio.play();
+      }
+      function playq2() {
+        var audio = document.getElementById("audio34");
+        audio.play();
+      }
+      function playr() {
+        var audio = document.getElementById("audio35");
+        audio.play();
+      }
+      function playr2() {
+        var audio = document.getElementById("audio36");
+        audio.play();
+      }
+      function plays() {
+        var audio = document.getElementById("audio37");
+        audio.play();
+      }
+      function plays2() {
+        var audio = document.getElementById("audio38");
+        audio.play();
+      }
+      function playt() {
+        var audio = document.getElementById("audio39");
+        audio.play();
+      }
+      function playt2() {
+        var audio = document.getElementById("audio40");
+        audio.play();
+      }
+      function playu() {
+        var audio = document.getElementById("audio41");
+        audio.play();
+      }
+      function playu2() {
+        var audio = document.getElementById("audio42");
+        audio.play();
+      }
+      function playv() {
+        var audio = document.getElementById("audio43");
+        audio.play();
+      }
+      function playv2() {
+        var audio = document.getElementById("audio44");
+        audio.play();
+      }
+      function playw() {
+        var audio = document.getElementById("audio45");
+        audio.play();
+      }
+      function playw2() {
+        var audio = document.getElementById("audio46");
+        audio.play();
+      }
+      function playx() {
+        var audio = document.getElementById("audio47");
+        audio.play();
+      }
+      function playx2() {
+        var audio = document.getElementById("audio48");
+        audio.play();
+      }
+      function playy() {
+        var audio = document.getElementById("audio49");
+        audio.play();
+      }
+      function playy2() {
+        var audio = document.getElementById("audio50");
+        audio.play();
+      }
+      function playz() {
+        var audio = document.getElementById("audio51");
+        audio.play();
+      }
+      function playz2() {
+        var audio = document.getElementById("audio52");
+        audio.play();
+      }
+    </script>
+    <br>
+    <br>
+    <p>Alphabets</p>
+    <br>
+    <br>
+    <br>
+
+    <input type="image" src="images\a.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playa()">
+    <audio id="audio1" src="audio\A.wav"></audio>
+    <audio id="audiono" src="audio\learnalpha.mp3" autoplay></audio>
+    <input type="image" src="images\AlphaA.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playa2()">
+    <audio id="audio2" src="audio\Apple.m4a"></audio> 
+    <input type="image" src="images\b.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playb()">
+    <audio id="audio3" src="audio\B.wav"></audio>
+    <input type="image" src="images\ball.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playb2()">
+    <audio id="audio4" src="audio\ball.m4a"></audio>    <br>
+    <input type="image" src="images\c.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playc()">
+    <audio id="audio5" src="audio\C.wav"></audio>
+    <input type="image" src="images\cat.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playc2()">
+    <audio id="audio6" src="audio\cat.m4a"></audio>
+    <input type="image" src="images\d.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playd()">
+    <audio id="audio7" src="audio\D.wav"></audio>
+    <input type="image" src="images\AlphaD.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playd2()">
+    <audio id="audio8" src="audio\dog.m4a"></audio><br>
+    <input type="image" src="images\E.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playe()">
+    <audio id="audio9" src="audio\E.wav"></audio>
+    <input type="image" src="images\elephant.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playe2()">
+    <audio id="audio10" src="audio\Elephant.m4a"></audio>
+    <input type="image" src="images\f.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playf()">
+    <audio id="audio11" src="audio\F.wav"></audio>
+    <input type="image" src="images\fish.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playf2()">
+    <audio id="audio12" src="audio\fish.m4a"></audio><br>
+    <input type="image" src="images\g.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playg()">
+    <audio id="audio13" src="audio\G.wav"></audio>
+    <input type="image" src="images\AlphaG.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playg2()">
+    <audio id="audio14" src="audio\Grapes.m4a"></audio>
+    <input type="image" src="images\h.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playh()">
+    <audio id="audio15" src="audio\H.wav"></audio>
+    <input type="image" src="images\hat.png" alt="apple" width="200px" height="200px" value="PLAY" onclick="playh2()">
+    <audio id="audio16" src="audio\Hat.m4a"></audio><br>
+    <input type="image" src="images\i.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playi()">
+    <audio id="audio17" src="audio\I.wav"></audio>
+    <input type="image" src="images\AlphaI.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playi2()">
+    <audio id="audio18" src="audio\Icecream.m4a"></audio>
+    <input type="image" src="images\j.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playj()">
+    <audio id="audio19" src="audio\J.wav"></audio>
+    <input type="image" src="images\AlphaJ.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playj2()">
+    <audio id="audio20" src="audio\Joker.m4a"></audio><br>
+    <input type="image" src="images\k.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playk()">
+    <audio id="audio21" src="audio\K.wav"></audio>
+    <input type="image" src="images\kite.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playk2()">
+    <audio id="audio22" src="audio\kite.m4a"></audio>
+    <input type="image" src="images\l.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playl()">
+    <audio id="audio23" src="audio\L.wav"></audio>
+    <input type="image" src="images\AlphaL.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playl2()">
+    <audio id="audio24" src="audio\lion.m4a"></audio><br>
+    <input type="image" src="images\m.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playm()">
+    <audio id="audio25" src="audio\M.wav"></audio>
+    <input type="image" src="images\AlphaM.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playm2()">
+    <audio id="audio26" src="audio\Monkey.m4a"></audio>
+    <input type="image" src="images\n.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playn()">
+    <audio id="audio27" src="audio\N.wav"></audio>
+    <input type="image" src="images\nest.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playn2()">
+    <audio id="audio28" src="audio\Nest.m4a"></audio>
+    <input type="image" src="images\o.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playo()">
+    <audio id="audio29" src="audio\O.wav"></audio>
+    <input type="image" src="images\AlphaO.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playo2()">
+    <audio id="audio30" src="audio\Orange.m4a"></audio>
+    <input type="image" src="images\p.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playp()">
+    <audio id="audio31" src="audio\P.wav"></audio>
+    <input type="image" src="images\parrot.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playp2()">
+    <audio id="audio32" src="audio\Parrot.m4a"></audio>
+    <input type="image" src="images\q.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playq()">
+    <audio id="audio33" src="audio\Q.wav"></audio>
+    <input type="image" src="images\queen.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playq2()">
+    <audio id="audio34" src="audio\Queen.m4a"></audio>
+    <input type="image" src="images\r.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playr()">
+    <audio id="audio35" src="audio\R.wav"></audio>
+    <input type="image" src="images\rabbit.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playr2()">
+    <audio id="audio36" src="audio\Rabbit.m4a"></audio>
+    <input type="image" src="images\s.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="plays()">
+    <audio id="audio37" src="audio\S.wav"></audio>
+    <input type="image" src="images\sun.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="plays2()">
+    <audio id="audio38" src="audio\Sun.m4a"></audio>
+    <input type="image" src="images\t.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playt()">
+    <audio id="audio39" src="audio\T.wav"></audio>
+    <input type="image" src="images\table.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playt2()">
+    <audio id="audio40" src="audio\Table.m4a"></audio>
+    <input type="image" src="images\u.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playu()">
+    <audio id="audio41" src="audio\U.wav"></audio>
+    <input type="image" src="images\AlphaU.png" alt="apple" width="200px" height="200px" value="PLAY" onclick="playu2()">
+    <audio id="audio42" src="audio\Umbrella.m4a"></audio>
+    <input type="image" src="images\v.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playv()">
+    <audio id="audio43" src="audio\V.wav"></audio>
+    <input type="image" src="images\AlphaV.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playv2()">
+    <audio id="audio44" src="audio\Van.m4a"></audio>
+    <input type="image" src="images\w.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playw()">
+    <audio id="audio45" src="audio\W.wav"></audio>
+    <input type="image" src="images\watch.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playw2()">
+    <audio id="audio46" src="audio\Watch.m4a"></audio>
+    <input type="image" src="images\x.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playx()">
+    <audio id="audio47" src="audio\X.wav"></audio>
+    <input type="image" src="images\xmastree.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playx2()">
+    <audio id="audio48" src="audio\Xmas tree.m4a"></audio>
+    <input type="image" src="images\y.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playy()">
+    <audio id="audio49" src="audio\Y.wav"></audio>
+    <input type="image" src="images\yack.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playy2()">
+    <audio id="audio50" src="audio\Yack.m4a"></audio>
+    <input type="image" src="images\z.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playz()">
+    <audio id="audio51" src="audio\Z.wav"></audio>
+    <input type="image" src="images\AlphaZ.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playz2()">
+    <audio id="audio52" src="audio\Zebra.m4a"></audio>
+    <br> <br>
+    <br>
+    <a href="whiteboard.html" class="neon-button">  Practice here  </a>
+    <br><br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+
+
+  </body>
+  </html>
+  </body>  
+</html>

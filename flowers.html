@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+ 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            height:100vh;
+        }
+        .card{
+            height: 300px;
+            margin:50px;
+            box-shadow: 5px 5px 20px black;
+        }
+        input[type='image'] {
+            height: 300px;
+            width: 250px;
+            border-radius: 3px;
+
+        }
+    img{
+            height: 300px;
+            width: 250px;
+            border-radius: 3px;
+
+        }
+        .intro{
+            height: 80px;
+            width: 250px;
+            padding: 6px;
+            bottom: 120px;
+            box-sizing: border-box;
+            position:relative;
+            background: rgb(27, 27, 27);
+            color: aliceblue;
+            margin-top: 50px;
+            opacity: 0.7;
+            transition: .5s;
+        }
+    
+        .card:hover{
+            cursor: pointer;
+        }
+        .card:hover .intro{
+            height: 120px;
+            bottom:150px;
+            background: black;
+        }
+  #quiz{
+    margin-left: 500px;
+    height: 80px;
+    width: 90px;
+    background-color: rgb(163, 16, 80);
+   
+  }
+
+  a{
+    color:white;
+    font-size: large;
+  }
+
+  a:hover{
+    color: #1f0c0c;
+    text-decoration: none;
+  }
+        
+    </style>
+    <script>
+        function play11() {
+            var audio = document.getElementById("audiono1");
+            audio.play();
+          }
+          function play12() {
+        var audio = document.getElementById("audiono2");
+        audio.play();
+      }
+      function play13() {
+        var audio = document.getElementById("audiono3");
+        audio.play();
+      }
+      function play14() {
+        var audio = document.getElementById("audiono4");
+        audio.play();
+      }
+      function play15() {
+        var audio = document.getElementById("audiono5");
+        audio.play();
+      }
+      function play16() {
+        var audio = document.getElementById("audiono6");
+        audio.play();
+      }
+      function play17() {
+        var audio = document.getElementById("audiono7");
+        audio.play();
+      }
+      function play18() {
+        var audio = document.getElementById("audiono8");
+        audio.play();
+      }
+      function play19() {
+        var audio = document.getElementById("audiono9");
+        audio.play();
+      }
+      function play20() {
+        var audio = document.getElementById("audiono10");
+        audio.play();  
+      } 
+      function play21() {
+        var audio = document.getElementById("audiono11");
+        audio.play();  
+      } 
+      function play22() {
+        var audio = document.getElementById("audiono12");
+        audio.play();  
+      } 
+      function play23() {
+        var audio = document.getElementById("audiono13");
+        audio.play();  
+      } 
+      function play24() {
+        var audio = document.getElementById("audiono14");
+        audio.play();  
+      } 
+      function play25() {
+        var audio = document.getElementById("audiono15");
+        audio.play();  
+      } 
+      function play26() {
+        var audio = document.getElementById("audiono16");
+        audio.play();  
+      } 
+      function playa() {
+        var audio = document.getElementById("audio1");
+        audio.play();
+      }
+      function playa2() {
+        var audio = document.getElementById("audio2");
+        audio.play();
+      }
+      function playb() {
+        var audio = document.getElementById("audio3");
+        audio.play();
+      }
+      function playb2() {
+        var audio = document.getElementById("audio4");
+        audio.play();
+      }
+      function playc() {
+        var audio = document.getElementById("audio5");
+        audio.play();
+      }
+      function playc2() {
+        var audio = document.getElementById("audio6");
+        audio.play();
+      }
+    </script>
+</head>
+<body>
+   
+    <div class="container">
+        
+        <div class="card">
+            <input type="image"  src="images\flowers\Flowermarigold.jpeg" alt="apple" value="PLAY" onclick="play11()" >
+            <audio id="audiono1" src="audio\flowers\Marigold.mp3"></audio>
+            <div class="intro">
+                <h1>Marigold</h1>
+                
+            </div>
+        </div>
+        
+        
+        <div class="card">
+            <input type="image" src="images\flowers\Flowerrose.jpeg" alt="apple" value="PLAY" onclick="play12()">
+            <audio id="audiono2" src="audio\flowers\Rose.mp3"></audio>
+            <div class="intro">
+                <h1>rose</h1>
+            </div>
+        </div>
+       
+        <div class="card">
+            <input type="image" src="images\flowers\Flowerhibiscus.jpeg" alt="apple" value="PLAY" onclick="play13()">
+            <audio id="audiono3" src="audio\flowers\Hibiscus.mp3"></audio>
+            <div class="intro">
+                <h1>Hibiscus</h1>
+                
+            </div>
+        </div>
+</div>
+<br>
+<br>
+<div class="container">
+        
+    <div class="card">
+        <input type="image" src="images\flowers\Flowerjasmine.jpeg" alt="apple"  value="PLAY" onclick="play14()">
+    <audio id="audiono4" src="audio\flowers\Jasmine.mp3"></audio>
+        <div class="intro">
+            <h1>Jasmine</h1>
+            
+        </div>
+    </div>
+    
+    
+    <div class="card">
+        <input type="image" src="images\flowers\Flowerlavender.jpeg" alt="apple"  value="PLAY" onclick="play15()">
+    <audio id="audiono5" src="audio\flowers\Lavender.mp3"></audio>
+        <div class="intro">
+            <h1>Lavender</h1>
+        </div>
+    </div>
+   
+    <div class="card">
+        <input type="image" src="images\flowers\Flowerlotus.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play16()">
+        <audio id="audiono6" src="audio\flowers\Lotus.mp3"></audio>
+        <div class="intro">
+            <h1>Lotus</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <input type="image" src="images\flowers\Flowersunflower.jpeg" alt="apple"  value="PLAY" onclick="play17()">
+        <audio id="audiono7" src="audio\flowers\Sunflower.mp3"></audio>
+        <div class="intro">
+            <h1>Sunflower</h1>
+            
+        </div>
+    </div>
+    
+    
+    <div class="card">
+        <input type="image" src="images\flowers\Flowerdaisy.jpeg" alt="apple"  value="PLAY" onclick="playa()">
+        <audio id="audio1" src="audio\flowers\Daisy.mp3"></audio>
+        <div class="intro">
+            <h1>Daisy</h1>
+        </div>
+    </div>
+   
+    <div class="card">
+        <input type="image" src="images\flowers\periwinkel.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playa2()">
+        <audio id="audio2" src="audio\flowers\Periwinkle.mp3"></audio> 
+        <div class="intro">
+            <h1>Periwinkle</h1>
+         
+    </div>
+    </div>
+
+
+</body>
+</html>

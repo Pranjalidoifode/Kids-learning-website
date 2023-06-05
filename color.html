@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Colors for Kids</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+  /* Style for the body */
+  body {
+   margin: 0;
+   padding: 0;
+   background-color: #f2f2f2;
+   font-family: Arial, sans-serif;
+  }
+
+  /* Style for the header */
+  header {
+   background-color: #4CAF50;
+   color: white;
+   padding: 20px;
+   text-align: center;
+  }
+ /* Style for the images */
+  img {
+              margin: 0 auto;
+              display: block;
+              height:250px;
+              max-width: 100%;
+              filter: grayscale(100%);
+              transition: filter 0.3s ease-in-out;
+            }
+ 
+
+
+  /* Style for the container */
+  .container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+  }
+
+  /* Style for the color cards */
+  .card {
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   margin: 20px;
+   padding: 20px;
+   width: 300px;
+   text-align: center;
+   transition: transform 0.2s ease-in-out;
+  }
+
+  /* Style for the hover effect on the color cards */
+  .card:hover img {
+   filter: none;
+  }
+
+  /* Style for the color name */
+  h2 {
+   font-size: 24px;
+   margin-top: 10px;
+   color: #333;
+   text-transform: capitalize;
+   font-weight: bold;
+  }
+
+  /* Media query for small screens */
+  @media only screen and (max-width: 600px) {
+   .card {
+    width: 100%;
+   }
+  }
+  #quiz{
+    margin-left: 510px;
+    height: 80px;
+    width: 90px;
+    background-color: rgb(163, 16, 80);
+   
+  }
+
+  a{
+    color:white;
+    font-size: large;
+  }
+
+  a:hover{
+    color: #1f0c0c;
+    text-decoration: none;
+  }
+ </style>
+
+<script>
+    function playa() {
+      var audio = document.getElementById("audio1");
+      audio.play();
+    }
+    function playa2() {
+      var audio = document.getElementById("audio2");
+      audio.play();
+    }
+    function playb() {
+      var audio = document.getElementById("audio3");
+      audio.play();
+    }
+    function playb2() {
+      var audio = document.getElementById("audio4");
+      audio.play();
+    }
+    function playc() {
+      var audio = document.getElementById("audio5");
+      audio.play();
+    }
+    function playc2() {
+      var audio = document.getElementById("audio6");
+      audio.play();
+    }
+    function playd() {
+      var audio = document.getElementById("audio7");
+      audio.play();
+    }
+    function playd2() {
+      var audio = document.getElementById("audio8");
+      audio.play();
+    }
+    function playe() {
+      var audio = document.getElementById("audio9");
+      audio.play();
+    }
+    function playe2() {
+      var audio = document.getElementById("audio10");
+      audio.play();
+    }
+    function playz() {
+      var audio = document.getElementById("audio11");
+      audio.play();
+    }
+</script>
+</head>
+<body>
+ <header>
+  <h1>Colors</h1>
+ </header>
+ <div class="container">
+  <div class="card">
+    <img src="images\colours\Purple.png" alt="apple" width="200px" height="200px" value="PLAY" onclick="playd2()">
+    <audio id="audio8" src="audio\colors\Colorpurple.m4a"></audio><br>
+   <h2>Purple</h2>
+  </div>
+  <div class="card">
+    <img src="images\colours\Blue.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playa2()">
+    <audio id="audio2" src="audio\colors\Colorblue.m4a"></audio> 
+   <h2>Blue</h2>
+  </div>
+  <div class="card">
+    <img src="images\colours\Brown.png" alt="apple" width="200px" height="200px" value="PLAY" onclick="playb()">
+    <audio id="audio3" src="audio\colors\Colorbrown.m4a"></audio>
+   <h2>Brown</h2>
+  </div>
+  <div class="card">
+    <img src="images\colours\Green.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playb2()">
+    <audio id="audio4" src="audio\colors\Colorgreen.m4a"></audio>
+   <h2>Green</h2>
+  </div>
+
+  <div class="card">
+    <img src="images\colours\Orangecolor.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playc2()">
+    <audio id="audio6" src="audio\colors\Colororange.m4a"></audio>
+   <h2>Orange</h2>
+</div>
+<div class="card">
+    <img src="images\colours\Red.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playe()">
+    <audio id="audio9" src="audio\colors\Colorred.m4a"></audio>
+    <h2>Red</h2>
+ </div>
+
+ <div class="card">
+    <img src="images\colours\Yellow.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="playz()">
+    <audio id="audio11" src="audio\colors\Coloryellow.m4a"></audio>
+    <h2>Yellow</h2>
+ </div>
+
+ <div class="card">
+    <img src="images\colours\pink.png" alt="apple" width="200px" height="200px" value="PLAY" onclick="playd()">
+    <audio id="audio7" src="audio\colors\Colorpink.m4a"></audio>
+    <h2>Pink</h2>
+ </div>
+</div>
+ <br>
+ <button id="quiz"><a href="colorquiz.html" class="neon-button"> Take a Quiz </a> </button>
+ <br><br><br><br>
+</body>
+</html>
+

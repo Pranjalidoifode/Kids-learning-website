@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Birds for Nursery Students</title>
+ <style>
+  body {
+   background-color: #F7DDBF;
+  }
+
+  h1 {
+   font-size: 48px;
+   color: #03396C;
+   text-align: center;
+   margin-top: 50px;
+   text-shadow: 2px 2px #F2B880;
+  }
+ p{
+    font-weight: bold;
+    font-size: larger;
+ }
+  .bird {
+   display: inline-block;
+   margin: 50px;
+   animation: fly 5s ease-in-out;
+  }
+
+  @keyframes fly {
+   0% { transform: translateX(-100%); }
+   100% { transform: translateX(100%); }
+  }
+  input[type='image'] {
+    height: 250px;
+    width: 250px;
+  }
+
+  #quiz{
+    margin-left: 500px;
+    height: 80px;
+    width: 90px;
+    background-color: rgb(163, 16, 80);
+   
+  }
+
+  a{
+    color:white;
+    font-size: large;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #1f0c0c;
+    text-decoration: none;
+  }
+ </style>
+ <script>
+    function play11() {
+        var audio = document.getElementById("audiono1");
+        audio.play();
+      }
+      function play12() {
+        var audio = document.getElementById("audiono2");
+        audio.play();
+      }
+      function play13() {
+        var audio = document.getElementById("audiono3");
+        audio.play();
+      }
+      function play14() {
+        var audio = document.getElementById("audiono4");
+        audio.play();
+      }
+      function play15() {
+        var audio = document.getElementById("audiono5");
+        audio.play();
+      }
+      function play16() {
+        var audio = document.getElementById("audiono6");
+        audio.play();
+      }
+      function play17() {
+        var audio = document.getElementById("audiono7");
+        audio.play();
+      }
+      function play18() {
+        var audio = document.getElementById("audiono8");
+        audio.play();
+      }
+      function play19() {
+        var audio = document.getElementById("audiono9");
+        audio.play();
+      }
+      function play20() {
+        var audio = document.getElementById("audiono10");
+        audio.play();  
+      } 
+      function play21() {
+        var audio = document.getElementById("audiono11");
+        audio.play();  
+      } 
+      function play22() {
+        var audio = document.getElementById("audiono12");
+        audio.play();  
+      } 
+      function play23() {
+        var audio = document.getElementById("audiono13");
+        audio.play();  
+      } 
+      function play24() {
+        var audio = document.getElementById("audiono14");
+        audio.play();  
+      } 
+ </script>
+</head>
+<body>
+ <h1>Lets learn about Birds</h1>
+ <div class="bird">
+  <!-- <img src="images\birds\Crow.jpg" alt="Dove"> -->
+  <input type="image" src="images\birds\Crow.jpg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play11()" >
+    <audio id="audiono1" src="audio\birds\Birdcrow.m4a"></audio>
+  <p>Crow</p>
+ </div>
+ <div class="bird">
+    <input type="image" src="images\birds\Duck.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play12()">
+    <audio id="audiono2" src="audio\birds\Birdduck.m4a"></audio>
+  <p>Duck</p>
+ </div>
+ <div class="bird">
+    <input type="image" src="images\birds\Eagle.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play13()">
+    <audio id="audiono3" src="audio\birds\Birdeagle.m4a"></audio>
+  <p>Eagle</p>
+</div>
+<div class="bird">
+    <input type="image" src="images\birds\Hen.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play14()">
+    <audio id="audiono4" src="audio\birds\Birdhen.m4a"></audio>
+  <p>Hen</p>
+ </div>
+ <div class="bird">
+    <input type="image" src="images\birds\Peacock.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play15()">
+    <audio id="audiono5" src="audio\birds\Birdpeacock.m4a"></audio>
+  <p>Peacock</p>
+ </div>
+ <div class="bird">
+    <input type="image" src="images\birds\Pigeon.jpeg" alt="apple" width="200px" height="200px" value="PLAY" onclick="play16()">
+    <audio id="audiono6" src="audio\birds\Birdpigeon.m4a"></audio>
+  <p>Pigen</p>
+</div>
+<br>
+<button id="quiz"><a href="birdsquiz.html" class="neon-button"> Take a Quiz </a> </button>
+<br><br>
+</body>
+</html>
